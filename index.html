@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IGCartes - Soluciones Empresariales Innovadoras</title>
+
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      type="image/png"
+      href="assets/img/favicon.png"
+      sizes="192x192" />
+
+    <!-- Tailwind & Fonts -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap"
+      rel="stylesheet" />
+
+    <!-- External CSS Libraries -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
+  <body class="text-gray-100">
+    <!-- HEADER -->
+    <header
+      id="mainHeader"
+      class="fixed top-0 left-0 right-0 z-50 py-4 px-6 md:px-12">
+      <div class="container mx-auto flex justify-between items-center">
+        <a href="#" class="text-3xl font-bold">
+          <img src="assets/img/logo.svg" alt="Logo IGCartes" class="h-16" />
+        </a>
+        <nav class="hidden md:flex space-x-6 items-center">
+          <a href="#hero" class="nav-link-hover transition-colors">Inicio</a>
+          <a href="#testimonials" class="nav-link-hover transition-colors"
+            >Testimonios</a
+          >
+          <a href="#about" class="nav-link-hover transition-colors">Nosotros</a>
+          <a href="#contact" class="button-accent-purple navbar-contact-button"
+            >Contacto</a
+          >
+        </nav>
+        <button
+          id="mobileMenuBtn"
+          class="md:hidden text-3xl text-gray-300 nav-link-hover transition-colors">
+          ☰
+        </button>
+      </div>
+      <div
+        id="mobileMenu"
+        class="hidden md:hidden absolute top-full left-0 right-0 bg-gray-800 bg-opacity-95 backdrop-blur-md p-6 space-y-4">
+        <a href="#hero" class="block text-lg nav-link-hover transition-colors"
+          >Inicio</a
+        >
+        <a
+          href="#testimonials"
+          class="block text-lg nav-link-hover transition-colors"
+          >Testimonios</a
+        >
+        <a href="#about" class="block text-lg nav-link-hover transition-colors"
+          >Nosotros</a
+        >
+        <a href="#contact" class="button-accent-purple">Contacto</a>
+      </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section
+      id="hero"
+      class="min-h-screen flex items-center justify-center text-center px-4 pt-20 md:pt-0">
+      <canvas id="heroBackgroundCanvas"></canvas>
+      <div class="hero-content-container max-w-3xl reveal">
+        <h1 class="text-5xl md:text-7xl font-extrabold mb-6 leading-tight">
+          Potencia tu trabajo con <span class="text-gradient-accent">IA</span>
+        </h1>
+        <p class="text-xl md:text-2xl text-gray-300 mb-10 leading-relaxed">
+          Lidera el futuro empresarial con expertos en Inteligencia Artificial;
+          Asesoría, Automatización y Análisis estratégico
+        </p>
+        <a href="#testimonials" class="button-accent-purple">Ver Testimonios</a>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS SECTION -->
+    <section id="testimonials" class="py-16 md:py-24">
+      <div class="container mx-auto px-4 text-center">
+        <div class="reveal">
+          <h2 class="text-4xl md:text-5xl font-bold mb-4">
+            <span class="text-gradient-accent">Q</span>ué Dicen Nuestros
+            Clientes
+          </h2>
+          <p class="text-lg text-gray-400 mb-12 md:mb-16 max-w-2xl mx-auto">
+            Descubre cómo hemos ayudado a otras empresas a alcanzar sus
+            objetivos y transformar sus operaciones.
+          </p>
+        </div>
+
+        <div class="testimonial-swiper-container reveal">
+          <div class="swiper-wrapper">
+            <!-- Testimonio 1 -->
+            <div class="swiper-slide">
+              <div class="testimonial-card">
+                <p class="testimonial-text">
+                  "La implementación de IA que IGCartes desarrolló para nosotros
+                  ha revolucionado nuestra eficiencia operativa.
+                  ¡Impresionante!"
+                </p>
+                <div>
+                  <p class="client-name">Ana Pérez</p>
+                  <p class="client-company">CEO, Tech Solutions S.A.</p>
+                </div>
+              </div>
+            </div>
+            <!-- Testimonio 2 -->
+            <div class="swiper-slide">
+              <div class="testimonial-card">
+                <p class="testimonial-text">
+                  "El análisis estratégico y la automatización de procesos nos
+                  permitieron escalar de una forma que no creíamos posible.
+                  ¡Totalmente recomendados!"
+                </p>
+                <div>
+                  <p class="client-name">Carlos López</p>
+                  <p class="client-company">Director, Innova Corp</p>
+                </div>
+              </div>
+            </div>
+            <!-- Testimonio 3 -->
+            <div class="swiper-slide">
+              <div class="testimonial-card">
+                <p class="testimonial-text">
+                  "Desde el desarrollo web hasta la consultoría, el equipo de
+                  IGCartes demostró un profesionalismo y conocimiento
+                  excepcionales."
+                </p>
+                <div>
+                  <p class="client-name">Laura Gómez</p>
+                  <p class="client-company">
+                    Gerente de Marketing, Digital Avanzado
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- Testimonio 4 -->
+            <div class="swiper-slide">
+              <div class="testimonial-card">
+                <p class="testimonial-text">
+                  "Su enfoque en soluciones personalizadas y el uso de
+                  tecnologías de vanguardia nos han dado una ventaja competitiva
+                  real."
+                </p>
+                <div>
+                  <p class="client-name">Javier Rodríguez</p>
+                  <p class="client-company">Fundador, StartUp Creativa</p>
+                </div>
+              </div>
+            </div>
+            <!-- Testimonio 5 -->
+            <div class="swiper-slide">
+              <div class="testimonial-card">
+                <p class="testimonial-text">
+                  "La transformación digital de nuestra empresa fue un éxito
+                  gracias a la guía experta y las herramientas innovadoras de
+                  IGCartes."
+                </p>
+                <div>
+                  <p class="client-name">Sofía Martínez</p>
+                  <p class="client-company">
+                    Directora General, Logística Global
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- Testimonio 6 -->
+            <div class="swiper-slide">
+              <div class="testimonial-card">
+                <p class="testimonial-text">
+                  "No solo entregan resultados, sino que también educan y
+                  acompañan en cada paso del proceso. Un socio tecnológico
+                  invaluable."
+                </p>
+                <div>
+                  <p class="client-name">Martín Fernández</p>
+                  <p class="client-company">
+                    CTO, Servicios Financieros Integrados
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Navegación Swiper -->
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="py-16 md:py-24">
+      <div
+        class="container mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
+        <div class="reveal">
+          <img
+            src="https://placehold.co/600x400/FE5BAC/FFFFFF?text=Innovaci%C3%B3n+IA+en+Acci%C3%B3n"
+            alt="Innovación con Inteligencia Artificial"
+            class="rounded-xl shadow-2xl w-full" />
+        </div>
+        <div class="reveal">
+          <h2 class="text-4xl md:text-5xl font-bold mb-6">
+            <span class="text-gradient-accent">S</span>obre Nosotros
+          </h2>
+          <p class="text-lg text-gray-300 mb-4 leading-relaxed">
+            En IGCartes, impulsamos la evolución de tu negocio con Inteligencia
+            Artificial. Creemos en la IA como una herramienta para potenciar el
+            talento humano, transformando la complejidad tecnológica en
+            resultados tangibles y estrategias de futuro.
+          </p>
+          <p class="text-lg text-gray-300 mb-6 leading-relaxed">
+            Somos tu socio estratégico en la era digital, ofreciendo análisis de
+            datos avanzados, automatización inteligente y capacitación experta.
+          </p>
+          <a href="#contact" class="button-accent-purple"
+            >Hablemos de tu Proyecto</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="py-16 md:py-24">
+      <div class="container mx-auto px-4 text-center">
+        <div class="reveal">
+          <h2 class="text-4xl md:text-5xl font-bold mb-4">
+            <span class="text-gradient-accent">C</span>ontáctanos
+          </h2>
+          <p class="text-lg text-gray-400 mb-10 max-w-xl mx-auto">
+            ¿Listo para llevar tu empresa al siguiente nivel? Completa el
+            formulario o envíanos un correo.
+          </p>
+        </div>
+        <div class="max-w-lg mx-auto reveal">
+          <form action="#" method="POST" class="space-y-6">
+            <input
+              type="text"
+              name="name"
+              id="name"
+              required
+              placeholder="Nombre Completo"
+              class="form-input" />
+            <input
+              type="email"
+              name="email"
+              id="email"
+              required
+              placeholder="Correo Electrónico"
+              class="form-input" />
+            <textarea
+              name="message"
+              id="message"
+              rows="4"
+              required
+              placeholder="Tu mensaje..."
+              class="form-input"></textarea>
+            <button type="submit" class="w-full button-accent-purple">
+              Enviar Mensaje
+            </button>
+          </form>
+
+          <p class="mt-8 text-gray-400">O encuéntranos en:</p>
+          <div class="social-icons-container">
+            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-tiktok"></i></a>
+            <a href="#" class="social-icon"
+              ><i class="fab fa-linkedin-in"></i
+            ></a>
+          </div>
+          <a
+            href="mailto:contacto@igcartes.com"
+            class="mt-2 text-lg accent-color hover:underline"
+            >contacto@igcartes.com</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="py-8 text-center">
+      <p class="text-gray-500">
+        &copy; <span id="currentYear"></span> IGCartes. Todos los derechos
+        reservados.
+      </p>
+    </footer>
+
+    <!-- JS LIBS & CUSTOM SCRIPT -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,323 @@
+:root {
+  --accent-color: #fe5bac;
+  --gradient-start: #4796e3;
+  --gradient-mid1: #9177c7;
+  --gradient-mid2: #ca6673;
+  --gradient-end: #fe5bac;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #161618;
+  color: #f3f4f6;
+  overflow-x: hidden;
+}
+
+.accent-color {
+  color: var(--accent-color);
+}
+
+.button-accent-purple {
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  padding: 14px 30px;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--accent-color);
+  background-color: transparent;
+  border: 2px solid var(--accent-color);
+  border-radius: 50px;
+  overflow: hidden;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08);
+  transition: color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+}
+
+.button-accent-purple::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  right: 50%;
+  bottom: 0;
+  opacity: 0;
+  background-color: var(--accent-color);
+  z-index: -1;
+  transition: all 0.5s ease;
+}
+
+.button-accent-purple:hover {
+  color: #fff;
+}
+
+.button-accent-purple:hover::before {
+  left: 0;
+  right: 0;
+  opacity: 1;
+}
+
+.button-accent-purple:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(254, 91, 172, 0.4);
+}
+
+header nav a.button-accent-purple.navbar-contact-button {
+  padding: 8px 25px;
+  font-size: 14px;
+}
+
+#mobileMenu .button-accent-purple {
+  padding: 12px 25px;
+  display: block;
+  width: 100%;
+}
+
+.text-gradient-accent {
+  font-weight: bold;
+  background: linear-gradient(
+    to right,
+    var(--gradient-start),
+    var(--gradient-mid1),
+    var(--gradient-mid2),
+    var(--gradient-end)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  display: inline;
+}
+
+.nav-link-hover:hover {
+  color: var(--accent-color);
+}
+
+header nav a:not(.button-accent-purple) {
+  position: relative;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  line-height: 1.5;
+  transition: color 0.3s ease-in-out;
+}
+
+header nav a:not(.button-accent-purple)::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--accent-color);
+  transition: width 0.3s ease-in-out;
+}
+
+header nav a:not(.button-accent-purple):hover::after {
+  width: 100%;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#hero {
+  position: relative;
+  overflow: hidden;
+}
+
+#heroBackgroundCanvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.hero-content-container {
+  position: relative;
+  z-index: 1;
+}
+
+.testimonial-swiper-container {
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 50px;
+  position: relative;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.testimonial-card {
+  width: 90%;
+  max-width: 380px;
+  min-height: 280px;
+  padding: 2rem;
+  background-color: rgba(35, 35, 40, 0.6);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(254, 91, 172, 0.25);
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(254, 91, 172, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
+}
+
+.swiper-slide-active .testimonial-card {
+  transform: scale(1.05);
+  border-color: var(--accent-color);
+  box-shadow: 0 0 25px 5px rgba(254, 91, 172, 0.35),
+    0 0 35px 10px rgba(254, 91, 172, 0.15);
+}
+
+.testimonial-card .testimonial-text {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #d1d5db;
+  flex-grow: 1;
+  margin-bottom: 1.5rem;
+  font-style: italic;
+}
+
+.testimonial-card .client-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #f3f4f6;
+  margin-top: auto;
+}
+
+.testimonial-card .client-company {
+  font-size: 0.85rem;
+  color: #9ca3af;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: var(--accent-color);
+  background-color: rgba(35, 35, 40, 0.5);
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  border: 1px solid rgba(254, 91, 172, 0.3);
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  background-color: rgba(254, 91, 172, 0.3);
+  color: #ffffff;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.swiper-button-prev {
+  left: 10px;
+}
+
+.swiper-button-next {
+  right: 10px;
+}
+
+@media (min-width: 768px) {
+  .swiper-button-prev {
+    left: calc(50% - 190px - 30px - 22px);
+  }
+  .swiper-button-next {
+    right: calc(50% - 190px - 30px - 22px);
+  }
+}
+
+.swiper-pagination-bullet {
+  background-color: #9ca3af;
+  opacity: 0.7;
+  width: 10px;
+  height: 10px;
+  transition: background-color 0.3s ease, opacity 0.3s ease;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: var(--accent-color);
+  opacity: 1;
+}
+
+.swiper-pagination {
+  bottom: 10px !important;
+}
+
+/* SCROLLBAR */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #1f2937;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--accent-color);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #e750a0;
+}
+
+/* HEADER */
+header {
+  transition: background-color 0.3s ease-in-out,
+    backdrop-filter 0.3s ease-in-out;
+}
+header.scrolled {
+  background-color: rgba(22, 22, 24, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* SOCIAL ICONS */
+.social-icons-container {
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+.social-icon {
+  color: #9ca3af;
+  font-size: 1.5rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+.social-icon:hover {
+  color: var(--accent-color);
+  transform: translateY(-2px);
+}
+
+/* INPUTS (usados en contacto) */
+.form-input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  background-color: #374151;
+  border: 1px solid #4b5563;
+  color: white;
+  placeholder-color: #9ca3af;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
